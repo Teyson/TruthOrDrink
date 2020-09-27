@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teyson.presentation.StartGameController">
+   <children>
+      <Button fx:id="startGameBtn" layoutX="224.0" layoutY="180.0" mnemonicParsing="false" onAction="#startGameHandler" prefHeight="40.0" prefWidth="150.0" text="Start Game" />
+      <Button fx:id="optionsBtn" layoutX="245.0" layoutY="240.0" mnemonicParsing="false" onAction="#optionsHandler" prefHeight="20.0" prefWidth="110.0" text="Question Options" />
+      <Button fx:id="rulesBtn" layoutX="257.0" layoutY="280.0" mnemonicParsing="false" onAction="#rulesHandler" prefHeight="25.0" prefWidth="85.0" text="Rules &amp; Help" />
+      <Button fx:id="creditsBtn" layoutX="261.0" layoutY="320.0" mnemonicParsing="false" onAction="#creditsHandler" prefHeight="20.0" prefWidth="75.0" text="Credits" />
+   </children>
+</AnchorPane>
