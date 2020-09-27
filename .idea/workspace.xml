@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b037d0bb-cbb0-466d-9e49-74bbdc54946b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/teyson/persistence/questions.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/teyson/persistence/questions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/teyson/domain/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/teyson/domain/Question.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601247187755</updated>
-      <workItem from="1601247195955" duration="1156000" />
+      <workItem from="1601247195955" duration="1871000" />
     </task>
     <servers />
   </component>
