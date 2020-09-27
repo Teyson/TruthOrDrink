@@ -38,6 +38,7 @@ public class questionOptionsController implements Initializable {
 
     public void addBtnHandler(ActionEvent actionEvent) {
         Question q = new Question(persistence.getHighestId() + 1, this.questionTxtbox.getText());
+        allQuestions.add(q);
         game.getAllQuestions().add(q);
         persistence.addQuestion(q);
     }
