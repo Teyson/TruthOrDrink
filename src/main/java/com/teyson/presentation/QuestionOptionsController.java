@@ -11,10 +11,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class questionOptionsController implements Initializable {
+public class QuestionOptionsController implements Initializable {
 
     private final Game game = Game.getInstance();
     private final IPersistence persistence = IPersistence.getInstance();
@@ -50,4 +51,11 @@ public class questionOptionsController implements Initializable {
     }
 
 
+    public void backBtnHandler(ActionEvent actionEvent) {
+        try {
+            App.setRoot("startGame");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
