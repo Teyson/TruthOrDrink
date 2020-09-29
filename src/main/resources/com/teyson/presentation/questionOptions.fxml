@@ -3,13 +3,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teyson.presentation.questionOptionsController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teyson.presentation.QuestionOptionsController">
    <children>
       <ListView fx:id="questionList" prefHeight="400.0" prefWidth="243.0" />
       <Button fx:id="addQuestionBtn" layoutX="263.0" layoutY="303.0" mnemonicParsing="false" onAction="#addBtnHandler" text="Add Question" />
-      <Button fx:id="removeQuestionButton" layoutX="418.0" layoutY="303.0" mnemonicParsing="false" onAction="#removeBtnHandler" text="Remove Question" />
-      <TextField fx:id="questionTxtbox" layoutX="263.0" layoutY="50.0" prefHeight="26.0" prefWidth="265.0" />
+      <Button fx:id="removeQuestionButton" layoutX="475.0" layoutY="303.0" mnemonicParsing="false" onAction="#removeBtnHandler" text="Remove Question" />
+      <TextField fx:id="questionTxtbox" layoutX="263.0" layoutY="50.0" prefHeight="26.0" prefWidth="324.0" />
       <Label layoutX="263.0" layoutY="33.0" text="Question: " />
+      <Button fx:id="backBtn" layoutX="545.0" layoutY="360.0" mnemonicParsing="false" onAction="#backBtnHandler" text="Back" />
    </children>
 </AnchorPane>
