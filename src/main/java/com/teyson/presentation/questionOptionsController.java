@@ -16,12 +16,10 @@ import java.util.ResourceBundle;
 
 public class questionOptionsController implements Initializable {
 
-    public ListView<Question> questionList;
-    public TextField questionTxtbox;
-
     private final Game game = Game.getInstance();
     private final IPersistence persistence = IPersistence.getInstance();
-
+    public ListView<Question> questionList;
+    public TextField questionTxtbox;
     private ObservableList<Question> allQuestions = FXCollections.observableArrayList(game.getAllQuestions());
 
     @Override
@@ -38,9 +36,11 @@ public class questionOptionsController implements Initializable {
 
     public void addBtnHandler(ActionEvent actionEvent) {
         Question q = new Question(persistence.getHighestId() + 1, this.questionTxtbox.getText());
-        allQuestions.add(q);
-        game.getAllQuestions().add(q);
-        persistence.addQuestion(q);
+        if (!allQuestions.contains(q)) {
+            allQuestions.add(q);
+            game.getAllQuestions().add(q);
+            persistence.addQuestion(q);
+        }
     }
 
     public void removeBtnHandler(ActionEvent actionEvent) {
