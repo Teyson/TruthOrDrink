@@ -4,11 +4,8 @@ import com.google.gson.reflect.TypeToken;
 import com.teyson.domain.Question;
 import com.teyson.interfaces.IPersistence;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileWriter;
+import java.io.*;
 
-import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -36,7 +33,6 @@ public class Persistence implements IPersistence {
     private int highestId;
 
     public Persistence() {
-        //HJÆÆÆÆÆÆÆÆÆÆÆÆÆÆÆÆÆÆLP DET HER LORT VIRKER IKKE....
         this.questionFile = new File("src\\main\\resources\\com\\teyson\\persistence\\questions.json");
         this.allQuestions = loadQuestions();
         highestId = findHighestId();
@@ -68,7 +64,7 @@ public class Persistence implements IPersistence {
             reader.close();
 
             if(questions == null){
-                return new ArrayList<Question>();
+                return new ArrayList<>();
             }else {
                 return questions;
             }
@@ -84,15 +80,13 @@ public class Persistence implements IPersistence {
         //checks if the question is already in the list
         if(!allQuestions.contains(q)){
             //makes the json string from the object
-            String json = gson.toJson(q);
+            allQuestions.add(q);
+            String json = gson.toJson(allQuestions);
             try {
                 //Write object to file
-                fileWriter = new FileWriter(questionFile, true);
+                fileWriter = new FileWriter(questionFile, false);
                 fileWriter.write(json);
                 fileWriter.close();
-
-                //Update the question list
-                allQuestions.add(q);
 
                 //update the highest id
                 if(highestId < q.getId()){
@@ -122,9 +116,8 @@ public class Persistence implements IPersistence {
     public boolean saveQuestions() {
         try {
             fileWriter = new FileWriter(questionFile, false);
-            for(Question q : allQuestions){
-                fileWriter.write(gson.toJson(q));
-            }
+            fileWriter.write(gson.toJson(allQuestions));
+            fileWriter.close();
             return true;
         } catch (IOException e) {
             e.printStackTrace();
