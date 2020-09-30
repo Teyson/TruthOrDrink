@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b037d0bb-cbb0-466d-9e49-74bbdc54946b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/teyson/presentation/teamName.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/teyson/presentation/game.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/teyson/presentation/game.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
